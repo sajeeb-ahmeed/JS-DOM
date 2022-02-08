@@ -29,3 +29,8 @@ for (let section of sections) {
     section.style.padding = '10px'
     section.style.margin = '10px'
 }
+
+function colortest() {
+    document.body.style.backgroundColor = 'black'
+    document.body.style.Color = '#fff'
+}
