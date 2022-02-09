@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="article-list">
+        <article>
+            <h3>hello</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, animi.</p>
+        </article>
+        <article>
+            <h3>hello</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, animi.</p>
+        </article>
+        <article>
+            <h3>hello</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, animi.</p>
+        </article>
+        <article>
+            <h3>hello</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, animi.</p>
+        </article>
+    </div>
+    <script>
+        const article = document.createElement('article');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'hello h3 from js';
+        const p = document.createElement('p');
+        p.innerText = 'hello peraghrap from js ';
+        article.appendChild(h3);
+        article.appendChild(p);
+        const sectionblog = document.getElementById('article-list');
+        sectionblog.appendChild(article)
+    </script>
+</body>
+
+</html>

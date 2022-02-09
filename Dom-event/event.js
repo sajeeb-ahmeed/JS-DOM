@@ -59,3 +59,85 @@ document.getElementById('updatebtn').addEventListener('click', function () {
     p.innerText = inputFiled.value;
     inputFiled.value = ''
 })
+//usser comment handler
+document.getElementById('submit-comment').addEventListener('click', function () {
+
+    const commentBox = document.getElementById('new-comment')
+    const userComment = commentBox.value
+
+    const newComment = document.createElement('p');
+    newComment.innerText = userComment;
+
+    const commentContainer = document.getElementById('comment-container');
+    commentContainer.appendChild(newComment);
+
+    commentBox.value = '';
+});
+
+
+// Simple github like delete confirmation button
+
+//simple delete
+document.getElementById('delete-btn').addEventListener('click', function () {
+    const deletes = document.getElementById('secret-text');
+    deletes.style.display = 'none'
+
+})
+//focus 
+document.getElementById('delete-confrim').addEventListener('focus', function () {
+
+    document.body.style.backgroundColor = 'coral'
+
+});
+
+//blur
+
+document.getElementById('delete-confrim').addEventListener('blur', function () {
+
+    document.body.style.backgroundColor = 'white'
+
+});
+// keydown
+// document.getElementById('delete-confrim').addEventListener('keydown', function () {
+
+//     const keydown = document.getElementById('delete-confrim');
+//     const showValue = keydown.value
+//     console.log(showValue);
+// });
+
+// keypress
+// document.getElementById('delete-confrim').addEventListener('keypress', function () {
+
+//     const keydown = document.getElementById('delete-confrim');
+//     const showValue = keydown.value
+//     console.log(showValue);
+// });
+
+
+// keyup 
+
+document.getElementById('delete-confrim').addEventListener('keyup', function () {
+    const keydown = document.getElementById('delete-confrim');
+    const showValue = keydown.value
+    console.log(showValue);
+});
+
+
+// delete like github 
+
+
+document.getElementById('delete-confrim').addEventListener('keyup', function (event) {
+    if (event.target.value == 'delete') {
+        document.getElementById('delete-btn').removeAttribute('disabled')
+    } else {
+        document.getElementById('delete-btn').setAttribute('disabled', true)
+    }
+
+});
+// change 
+
+document.getElementById('delete-confrim').addEventListener('change', function () {
+    const keydown = document.getElementById('delete-confrim');
+    const showValue = keydown.value
+    console.log(showValue);
+});
